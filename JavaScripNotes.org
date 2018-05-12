@@ -1,0 +1,44 @@
+* arithmetic
+** 简单运算中 有 + - * / % 等运算 但是他们都是分优先级的 所以为了更直观的观看 要用（）把一个层级的东西包括起来
+* string
+** 字符串可用 单引号‘’ 双引号“” 或者 斜单引号`` eg:`abc` = 'abc' = "abc"
+** \n 用来换行 但如果字符串就是\n 可用\\n表示
+** 在string中 （+） 可表示拼接的意思  ‘abc’ = 'ab' + 'c'; 注意 （-） 不是截取掉的意思
+** 还有一种特别情况 就是斜引号中如果包含（${}） 那这个字符串会把${}里面的结果计算出来 eg:console.log(`100 / 2 is ${100 / 2}`) => 100 / 2 is 50;
+* build-in func
+** string
+*** string.length                              求string长度 
+*** string.toUpperCase()                       string转大写  
+*** string.toLowerCase()                       string转小写 
+*** string.trim()                              去除掉string中的空格与换行符
+*** string.padStart(3,'0')                     字符串长度要至少有三个 不够的位置从前面补0 console.log('6'.padStart(3, "0")); => 006
+*** string.split('ele') string.join('ele2')    let a = 'abc'; let word = a.split('b'); let c = word.join('B') console.log(word)=>aBc
+*** string.repeat(count)                       重复   console.log("LA".repeat(3)); => LALALA
+** math
+*** typeof 类型  console.log(typeof 4.5) => number   console.log(typeof "x") => string
+*** Math.max(1,2)        求大
+*** Math.min(1,2)        求小
+*** Math.abs(1)          绝对值
+*** Math.floor(1.1)      向下取整
+*** Math.ceil (1.1)      向上取整
+*** Math.round (1.1)     四舍五入
+*** Math.random()        随机0-1的随机数
+*** Math.sqrt            开根号
+** array
+*** obj.push(ele)        数组添加对象到末尾          也可以用obj.unshift(ele)
+*** obj.pop()            数组删除末尾对象并返回删除的对象   也可以用obj.shift()
+*** obj.indexOf(ele)     返回数组中第一个ele的索引  lastIndexOf(ele) 返回数组中最后一个ele的索引 
+*** obj.slice(a,b)       从数组中返回 从a为索引开始到b的长度的对象  当不提供参数b的时候 返回从a索引开始到整个数组末尾的数据
+*** obj.concat           拷贝数组
+*** obj.reverseArray()   反向排列数组
+* Logical operations
+**  > < 当参数为字符串的时候 会默认比较长度 console.log("Aardvark" < "Zoroaster") =》 true
+**  &&  console.log(true && false) => false  console.log(true && true) => true
+**  ||  console.log(false || true) => true   console.log(false || false) => false  console.log(true || false) => true
+** ? :  console.log(true ? 1 : 2); => 1      console.log(false ? 1 : 2) => 2
+* auto type conversion
+** console.log(8 * null)     0
+** console.log("5" - 1)      4
+** console.log("5" + 1)      51
+** console.log("five" * 2)   NaN 
+** console.log(false == 0)   true
